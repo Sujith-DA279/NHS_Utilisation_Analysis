@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2Market Consumer Analytics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/primer-markdown/3.2.0/build.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
+    .container-lg {
+      max-width: 900px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h1, h2, h3, h4, h5, h6 {
+      color: #0366d6;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+    img {
+      max-width: 75%;
+      height: auto;
+    }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+    }
+    blockquote {
+      border-left: 4px solid #0366d6;
+      padding-left: 16px;
+      color: #555;
+      background-color: #e1eafa;
+      margin: 20px 0;
+    }
+    a {
+      color: #0366d6;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-lg p-responsive mt-6">
+    <article class="markdown-body">
+      <h1>2Market : Consumer-Analytics</h1>
+
+      <h3>📋 Project Brief</h3>
+      <p>
+        I conducted customer purchase behaviour analysis for 2Market, a global retailer, delivering actionable insights across demographics, advertising channels, and product preferences.
+      </p>
+
+      <h3>✅ Objectives</h3>
+      <p>
+        The analysis supported key business objectives:
+      </p>
+      <ul>
+        <li>increasing profitability</li>
+        <li>improving market position in different markets</li>
+        <li>enhancing customer experience by targeted marketing strategies</li>
+      </ul>
+
+
+      <h3>🎯 Conclusion </h3>
+      <p>
+        The analysis of 2Market's customer data revealed significant opportunities to increase revenue and market share through targeted strategies. Spain currently dominates revenue (49%), while child-free customers and social media channels demonstrate exceptional value. 
+      </p>
+      <ul>
+      <b>Key Recommendations:</b>
+        <li>Expand beyond Spain to diversify market presence</li>
+        <li>Target high-value child-free segments through Instagram</li>
+        <li>Prioritize social media over traditional marketing (4x more effective)</li>
+        <li>Enhance mid-life customer basket size and in-store experience</li>
+        <li>Diversify beyond liquor and meat product categories</li>
+     </ul>
+      <hr>
+
+      <h3>Project Overview:</h3>
+      <div>
+        <table>
+          <tr>
+            <th>⏱️ Duration</th>
+            <th>🏆 Grade</th>
+            <th>🛠️ Tools</th>
+          </tr>
+          <tr>
+            <td><b>6 Weeks</b></td>
+            <td><b>96% (High Distinction)</b></td>
+            <td>
+              <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
+              <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau">
+              <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="Excel">
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <hr>
+
+      <h3>Analytical Approach:</h3>
+      <h4>1. Data Preparation & Cleaning</h4>
+      <table>
+        <tr>
+          <th>Process</th>
+          <th>Highlights</th>
+        </tr>
+        <tr>
+          <td><b>Data Import</b></td>
+          <td>Imported raw marketing data into Excel as structured table</td>
+        </tr>
+        <tr>
+          <td><b>Data Cleaning</b></td>
+          <td>
+            <ul>
+              <li>Converted data types for proper analysis</li>
+              <li>Checked data integrity (duplicates, missing values)</li>
+              <li>Identified and addressed outliers using min/max/average</li>
+              <li>Standardized categorical data (marital status) with VLOOKUP</li>
+              <li>Normalized date fields using TEXTSPLIT, IF, and DATE functions</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Initial Analysis</b></td>
+          <td>
+            <ul>
+              <li>Created demographic distributions with box plots and line graphs</li>
+              <li>Analyzed relationships between customer features (age, income, marital status, family composition)</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <h4>2. SQL Analysis</h4>
+      <table>
+        <tr>
+          <th>Process</th>
+          <th>Highlights</th>
+        </tr>
+        <tr>
+          <td><b>Data Loading</b></td>
+          <td>Loaded cleaned Excel data into SQL data-table</td>
+        </tr>
+        <tr>
+          <td><b>Query Development</b></td>
+          <td>Wrote complex SQL queries using Joins, Subqueries, and Case Statements for detailed analysis.</td>
+        </tr>
+        <tr>
+          <td><b>Analysis Focus</b></td>
+          <td>
+            <ul>
+              <li>Identified best-selling products by country</li>
+              <li>Determined most effective advertising methods by country</li>
+              <li>Calculated marketing revenue attribution</li>
+              <li>Compared social media effectiveness across channels</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <h4>3. Tableau Dashboard Development</h4>
+      <table>
+        <tr>
+          <th>Component</th>
+          <th>Highlights</th>
+        </tr>
+        <tr>
+          <td><b>Dashboard Suite</b></td>
+          <td>Developed three interconnected dashboards:<br>• Customer Demographics<br>• Marketing Effectiveness<br>• Product Sales & Purchase Patterns</td>
+        </tr>
+        <tr>
+          <td><b>Technical Elements</b></td>
+          <td>
+            <ul>
+              <li>Created 41 calculated fields for dynamic analysis</li>
+              <li>Implemented data source filters for outliers</li>
+            </ul>
+          </td>
+        </tr>
+        <tr>
+          <td><b>Visualization Techniques</b></td>
+          <td>
+            <ul>
+              <li>Utilized Dynamic zone visibility for detailed exploration of different marketing channels</li>
+              <li>Treemaps for country-wise Revenue and Customer analysis</li>
+              <li>Interactive KPIs based on filtered segments</li>
+              <li>Cross-referenced visualizations</li>
+            </ul>
+          </td>
+        </tr>
+      </table>
+
+      <hr>
+
+      <h3>🗝️ Key Insights:</h3>
+      <h4>Customer Demographics</h4>
+      <ul>
+        <li>Identified Spain, South Africa, and Canada as top markets by revenue and customer count</li>
+        <li>Discovered <em>Midlife segment (45-54 years)</em> constitutes the largest customer group across countries</li>
+      </ul>
+      <blockquote>
+        <p><b>Value Discovery:</b> Child-free customers demonstrate significantly higher value, generating:</p>
+        <ul>
+          <li>$695,384 in revenue from just 630 customers</li>
+          <li>2-5× higher spending across all product categories</li>
+          <li>Higher average income across all age groups</li>
+        </ul>
+      </blockquote>
+
+      <div align="center">
+        <img src="https://github.com/user-attachments/assets/a44af12e-fb0c-4ba5-aee3-1f61fd918eda" alt="Customer Demographics Dashboard">
+        <p><em>Dashboard showing revenue distribution across countries and spending patterns by demographic segments</em></p>
+      </div>
+
+      <h4>Marketing Effectiveness</h4>
+      <ul>
+        <li>Quantified marketing attribution at <b>8% of overall revenue</b> from Q3 2012 to Q2 2014</li>
+      </ul>
+      <blockquote>
+        <p><b>Value Discovery:</b> Determined <em>social media channels</em> (Facebook, Twitter, Instagram) were <b>4x more effective</b> than traditional channels</p>
+        <ul>
+          <li>Highlighted Instagram as the highest-value channel (highest basket value at $126, lowest deal usage at 1.1)</li>
+          <li>Measured recent campaign success rates: Instagram (56%), Facebook (55%), Twitter (38%)</li>
+        </ul>
+      </blockquote>
+
+      <div align="center">
+        <img src="https://github.com/user-attachments/assets/21af8a48-6e92-48e4-9613-759339931a19" alt="Marketing Effectiveness Dashboard">
+        <p><em>Dashboard comparing Marketing Channels and their effectiveness across customer demographies and product patterns</em></p>
+      </div>
+
+      <h4>Product & Purchase Analysis</h4>
+      <ul>
+        <li>Identified Liquor and Meat products as dominant sales categories (75% of overall revenue)</li>
+        <li>Discovered <em>child-free customers</em> <b>outspend</b> those with children by <b>2-5x</b> across all categories</li>
+        <li>Recognized global preference for walk-in shopping despite improvements in online ratios</li>
+      </ul>
+      <blockquote>
+        <p>Tracked significant improvements in online purchase-to-web-visits ratio in Q1 2014</p>
+      </blockquote>
+
+      <div align="center">
+        <img src="https://github.com/user-attachments/assets/74c0cd49-805e-46bb-815e-14336a1a2065" alt="Products and Purchasing Patterns Dashboard">
+        <p><em>Dashboard showing product category performance and purchasing behavior across demographic segments</em></p>
+      </div>
+
+      <hr>
+
+      <h3>📊 Recommendations to Business:</h3>
+      <p>
+        Based on the comprehensive data analysis, the following strategic recommendations were presented to enhance 2Market's business performance:
+      </p>  
+      <h4>Business Recommendations</h4>
+      <ul>
+        <li> Mitigate risk by expanding customer base outside Spain. </li>
+        <li> Increase basket size for mid-life customers.</li>
+        <li> Focus on high-revenue customer segments, particularly child-free customers.</li>
+        <li> Prioritize Social media marketing, Instagram and Twitter
+          <ul>
+            <li> Instagram for child-free high value customers</li>
+            <li> Twitter for mid-life customers with children.</li>
+          </ul>
+        </li>
+        <li> Diversify product offerings beyond liquor and meat.</li>
+        <li> Enhance in-store shopping experience for customers with children.</li>
+      </ul>
+      <h4>Technical Recommendations</h4>
+      <ul>
+        <li>Conduct further analysis at regional levels to tailor marketing and product strategies more effectively.</li>
+        <li>Gather more granular product, invoicing and marketing data to refine sales and marketing strategies.</li>
+      </ul>
+      <hr>
+
+      <h3>The Tableau Dashboard is available here: <a href="https://public.tableau.com/views/2Market_Analysis_SujithKumaarKC/MarketingEffectivenessDashboard?:language=en-US&:sid=&:re[...]">2Market Customer Analysis</a></h3>
+      <div class='tableauPlaceholder' id='viz1741735184595' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;2M&#47;2Market_Analysis_SujithKumaarKC&#47;CustomerDemographics&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='2Market_Analysis_SujithKumaarKC&#47;CustomerDemographics' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;2M&#47;2Market_Analysis_SujithKumaarKC&#47;CustomerDemographics&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1741735184595');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='3300px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </article>
+  </div>
+</body>
+</html>
