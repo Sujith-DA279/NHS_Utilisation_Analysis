@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>2Market Consumer Analytics</title>
+  <title>NHS UK : Appointments Data Analysis</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/primer-markdown/3.2.0/build.css">
   <style>
     body {
@@ -63,11 +63,11 @@
 <body>
   <div class="container-lg p-responsive mt-6">
     <article class="markdown-body">
-      <h1>2Market : Consumer-Analytics</h1>
+      <h1>NHS UK : Appointments Data Analysis</h1>
 
       <h3>📋 Project Brief</h3>
       <p>
-        I conducted customer purchase behaviour analysis for 2Market, a global retailer, delivering actionable insights across demographics, advertising channels, and product preferences.
+        I conducted an in-depth analysis of NHS UK appointment data (2020-2022) to identify service utilization patterns, assess resource capacity, and investigate missed appointments, which incur significant costs.
       </p>
 
       <h3>✅ Objectives</h3>
@@ -75,23 +75,23 @@
         The analysis supported key business objectives:
       </p>
       <ul>
-        <li>increasing profitability</li>
-        <li>improving market position in different markets</li>
-        <li>enhancing customer experience by targeted marketing strategies</li>
+        <li>Understanding service utilization trends and patterns</li>
+        <li>Assessing staff and capacity adequacy across regions</li>
+        <li>Reducing missed appointments through targeted interventions</li>
+        <li>Evaluating the value of external data sources for decision-making</li>
       </ul>
-
 
       <h3>🎯 Conclusion </h3>
       <p>
-        The analysis of 2Market's customer data revealed significant opportunities to increase revenue and market share through targeted strategies. Spain currently dominates revenue (49%), while child-free customers and social media channels demonstrate exceptional value. 
+        The analysis revealed significant opportunities to improve NHS appointment utilization and reduce missed appointments. Weekdays show consistent over-utilization (73% of days exceeding capacity), while weekends are under-utilized.
       </p>
       <ul>
       <b>Key Recommendations:</b>
-        <li>Expand beyond Spain to diversify market presence</li>
-        <li>Target high-value child-free segments through Instagram</li>
-        <li>Prioritize social media over traditional marketing (4x more effective)</li>
-        <li>Enhance mid-life customer basket size and in-store experience</li>
-        <li>Diversify beyond liquor and meat product categories</li>
+        <li>Increase same-day and next-day appointments to reduce missed rates</li>
+        <li>Expand telephone and video consultations to optimize resources</li>
+        <li>Improve weekend utilization to relieve weekday overuse</li>
+        <li>Implement region-specific interventions for high-miss areas</li>
+        <li>Use automated reminders for appointments with longer booking windows</li>
      </ul>
       <hr>
 
@@ -102,14 +102,19 @@
             <th>⏱️ Duration</th>
             <th>🏆 Grade</th>
             <th>🛠️ Tools</th>
+            <th>📊 Datasets</th>
           </tr>
           <tr>
             <td><b>6 Weeks</b></td>
-            <td><b>96% (High Distinction)</b></td>
+            <td><b>93% (High Distinction)</b></td>
             <td>
-              <img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL">
-              <img src="https://img.shields.io/badge/Tableau-E97627?style=for-the-badge&logo=tableau&logoColor=white" alt="Tableau">
-              <img src="https://img.shields.io/badge/Excel-217346?style=for-the-badge&logo=microsoft-excel&logoColor=white" alt="Excel">
+              <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+              <img src="https://img.shields.io/badge/Pandas-150458?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas">
+              <img src="https://img.shields.io/badge/Seaborn-4EABE5?style=for-the-badge&logo=python&logoColor=white" alt="Seaborn">
+            </td>
+            <td>
+              <b>30 months</b> of appointment data<br>
+              <b>742.8M</b> appointments analyzed
             </td>
           </tr>
         </table>
@@ -126,173 +131,153 @@
         </tr>
         <tr>
           <td><b>Data Import</b></td>
-          <td>Imported raw marketing data into Excel as structured table</td>
+          <td>Loaded multiple NHS datasets with different time ranges<br>Consolidated appointment data across regional, national, and duration-specific sources</td>
         </tr>
         <tr>
           <td><b>Data Cleaning</b></td>
           <td>
             <ul>
-              <li>Converted data types for proper analysis</li>
-              <li>Checked data integrity (duplicates, missing values)</li>
-              <li>Identified and addressed outliers using min/max/average</li>
-              <li>Standardized categorical data (marital status) with VLOOKUP</li>
-              <li>Normalized date fields using TEXTSPLIT, IF, and DATE functions</li>
+              <li>Verified data consistency across the datasets</li>
+              <li>Validated appointment count alignments</li>
+              <li>Handled duplicate records</li>
+              <li>Standardized datetime fields for analysis</li>
             </ul>
           </td>
         </tr>
         <tr>
-          <td><b>Initial Analysis</b></td>
+          <td><b>Data Enhancement</b></td>
           <td>
             <ul>
-              <li>Created demographic distributions with box plots and line graphs</li>
-              <li>Analyzed relationships between customer features (age, income, marital status, family composition)</li>
+              <li>Mapped location codes to NHS organizational structure</li>
+              <li>Added geographical context by linking regions, ICBs, and sub-ICBs</li>
+              <li>Created derived fields for time and service settings</li>
             </ul>
           </td>
         </tr>
       </table>
 
-      <h4>2. SQL Analysis</h4>
+      <h4>2. Exploratory Data Analysis</h4>
       <table>
         <tr>
           <th>Process</th>
           <th>Highlights</th>
         </tr>
         <tr>
-          <td><b>Data Loading</b></td>
-          <td>Loaded cleaned Excel data into SQL data-table</td>
+          <td><b>Location Analysis</b></td>
+          <td>Analyzed 7 NHS regions with 42 ICBs and 106 sub-ICBs<br>Identified regional disparities in appointment volumes and missed rates</td>
         </tr>
         <tr>
-          <td><b>Query Development</b></td>
-          <td>Wrote complex SQL queries using Joins, Subqueries, and Case Statements for detailed analysis.</td>
-        </tr>
-        <tr>
-          <td><b>Analysis Focus</b></td>
+          <td><b>Categorical Analysis</b></td>
           <td>
             <ul>
-              <li>Identified best-selling products by country</li>
-              <li>Determined most effective advertising methods by country</li>
-              <li>Calculated marketing revenue attribution</li>
-              <li>Compared social media effectiveness across channels</li>
+              <li>Created custom functions to analyze multiple appointment categories</li>
+              <li>Examined service settings, context types, national categories, and appointment modes</li>
             </ul>
           </td>
         </tr>
+        <tr>
+          <td><b>Temporal Analysis</b></td>
+          <td>Assessed monthly, seasonal, and COVID-related trends<br>Identified impact of lockdown periods on appointment volumes</td>
+        </tr>
       </table>
 
-      <h4>3. Tableau Dashboard Development</h4>
+      <h4>3. Advanced Analysis</h4>
       <table>
         <tr>
           <th>Component</th>
           <th>Highlights</th>
         </tr>
         <tr>
-          <td><b>Dashboard Suite</b></td>
-          <td>Developed three interconnected dashboards:<br>• Customer Demographics<br>• Marketing Effectiveness<br>• Product Sales & Purchase Patterns</td>
+          <td><b>Missed Appointments</b></td>
+          <td>Analyzed 30.9M missed appointments (4.16% of total)<br>Identified key correlations with appointment modes and booking intervals<br>Quantified business impact of missed appointments</td>
         </tr>
         <tr>
-          <td><b>Technical Elements</b></td>
-          <td>
-            <ul>
-              <li>Created 41 calculated fields for dynamic analysis</li>
-              <li>Implemented data source filters for outliers</li>
-            </ul>
-          </td>
+          <td><b>Capacity Utilization</b></td>
+          <td>Evaluated daily capacity against the 1.2M appointment benchmark<br>Identified weekday vs. weekend utilization disparities<br>Assessed post-COVID capacity patterns</td>
         </tr>
         <tr>
-          <td><b>Visualization Techniques</b></td>
-          <td>
-            <ul>
-              <li>Utilized Dynamic zone visibility for detailed exploration of different marketing channels</li>
-              <li>Treemaps for country-wise Revenue and Customer analysis</li>
-              <li>Interactive KPIs based on filtered segments</li>
-              <li>Cross-referenced visualizations</li>
-            </ul>
-          </td>
+          <td><b>Multivariate Analysis</b></td>
+          <td>Combined mode, timing, and regional factors to identify missed appointment patterns<br>Created region-specific insights on appointment behaviors</td>
         </tr>
       </table>
 
       <hr>
 
       <h3>🗝️ Key Insights:</h3>
-      <h4>Customer Demographics</h4>
+      <h4>Appointment Distribution</h4>
       <ul>
-        <li>Identified Spain, South Africa, and Canada as top markets by revenue and customer count</li>
-        <li>Discovered <em>Midlife segment (45-54 years)</em> constitutes the largest customer group across countries</li>
+        <li>Identified General Practice as the dominant service setting (91% of appointments)</li>
+        <li>Discovered Face-to-Face (60%) and Telephone (28%) as the primary appointment modes</li>
+        <li>Face-to-Face appointments decreased while Telephone consultations doubled during COVID</li>
       </ul>
       <blockquote>
-        <p><b>Value Discovery:</b> Child-free customers demonstrate significantly higher value, generating:</p>
-        <ul>
-          <li>$695,384 in revenue from just 630 customers</li>
-          <li>2-5× higher spending across all product categories</li>
-          <li>Higher average income across all age groups</li>
-        </ul>
+        <p><b>Value Discovery:</b> 87.7% of all appointments have booking windows of 0-14 days, with same-day appointments showing the lowest missed rates across all modes</p>
       </blockquote>
 
       <div align="center">
-        <img src="https://github.com/user-attachments/assets/a44af12e-fb0c-4ba5-aee3-1f61fd918eda" alt="Customer Demographics Dashboard">
-        <p><em>Dashboard showing revenue distribution across countries and spending patterns by demographic segments</em></p>
+        <img src="https://github.com/user-attachments/assets/bc91e35a-dba6-4859-9377-6436386a4fa0" alt="NHS Appointment Distribution">
+        <p><em>Distribution showing significant variations in appointment volumes and types</em></p>
       </div>
 
-      <h4>Marketing Effectiveness</h4>
+      <h4>Capacity Utilization</h4>
       <ul>
-        <li>Quantified marketing attribution at <b>8% of overall revenue</b> from Q3 2012 to Q2 2014</li>
+        <li>Quantified weekday over-utilization with 73% of weekdays exceeding capacity</li>
+        <li>Identified Tuesday (107.3%) and Monday (103.6%) as peak utilization days</li>
+        <li>Measured weekend under-utilization with Saturday (9.9%) and Sunday (1.1%) showing minimal use</li>
       </ul>
       <blockquote>
-        <p><b>Value Discovery:</b> Determined <em>social media channels</em> (Facebook, Twitter, Instagram) were <b>4x more effective</b> than traditional channels</p>
-        <ul>
-          <li>Highlighted Instagram as the highest-value channel (highest basket value at $126, lowest deal usage at 1.1)</li>
-          <li>Measured recent campaign success rates: Instagram (56%), Facebook (55%), Twitter (38%)</li>
-        </ul>
+        <p><b>Value Discovery:</b> Weekend appointment expansion could significantly reduce weekday pressure, particularly following post-lockdown peak periods</p>
       </blockquote>
 
       <div align="center">
-        <img src="https://github.com/user-attachments/assets/21af8a48-6e92-48e4-9613-759339931a19" alt="Marketing Effectiveness Dashboard">
-        <p><em>Dashboard comparing Marketing Channels and their effectiveness across customer demographies and product patterns</em></p>
-      </div>
+        <img src="https://github.com/user-attachments/assets/52ae05a0-7217-406a-97b2-aa41ae8f2646" alt="NHS Capacity Utilization">
+        <p><em>Utilization trends showing weekday overuse and weekend underutilization</em></p>
+      </div>  
 
-      <h4>Product & Purchase Analysis</h4>
+      <h4>Missed Appointments</h4>
       <ul>
-        <li>Identified Liquor and Meat products as dominant sales categories (75% of overall revenue)</li>
-        <li>Discovered <em>child-free customers</em> <b>outspend</b> those with children by <b>2-5x</b> across all categories</li>
-        <li>Recognized global preference for walk-in shopping despite improvements in online ratios</li>
+        <li>Quantified Missed appointments as 4.16% of all appointments over 30 months of analysis.</li>
+        <li>Identified Face-to-Face appointments accounting for 78% of all missed appointments</li>
+        <li>Discovered strong correlation between booking interval and missed rates</li>
+        <li>Longer intervals showed significantly higher missed rates (9.8% for 28+ days vs. 2.0% for same-day)</li>
       </ul>
       <blockquote>
-        <p>Tracked significant improvements in online purchase-to-web-visits ratio in Q1 2014</p>
+        <p><b>Value Discovery:</b> Telephone appointments consistently show lower missed rates (1.4-3.3%) across all booking intervals</p>
       </blockquote>
 
       <div align="center">
-        <img src="https://github.com/user-attachments/assets/74c0cd49-805e-46bb-815e-14336a1a2065" alt="Products and Purchasing Patterns Dashboard">
-        <p><em>Dashboard showing product category performance and purchasing behavior across demographic segments</em></p>
+        <img src="https://github.com/user-attachments/assets/992b2c80-df7b-49b1-b0ae-d9a37303f43a" alt="Missed Appointments Analysis">
+        <p><em>Analysis of missed appointments by mode, booking interval, and region</em></p>
       </div>
 
       <hr>
 
-      <h3>📊 Recommendations to Business:</h3>
+      <h3>📊 Recommendations to NHS:</h3>
       <p>
-        Based on the comprehensive data analysis, the following strategic recommendations were presented to enhance 2Market's business performance:
+        Based on the comprehensive data analysis, the following strategic recommendations were presented to enhance NHS appointment management:
       </p>  
-      <h4>Business Recommendations</h4>
+      <h4>Operational Recommendations</h4>
       <ul>
-        <li> Mitigate risk by expanding customer base outside Spain. </li>
-        <li> Increase basket size for mid-life customers.</li>
-        <li> Focus on high-revenue customer segments, particularly child-free customers.</li>
-        <li> Prioritize Social media marketing, Instagram and Twitter
-          <ul>
-            <li> Instagram for child-free high value customers</li>
-            <li> Twitter for mid-life customers with children.</li>
-          </ul>
-        </li>
-        <li> Diversify product offerings beyond liquor and meat.</li>
-        <li> Enhance in-store shopping experience for customers with children.</li>
+        <li>Shorten booking intervals by increasing same-day and next-day appointments to reduce missed rates</li>
+        <li>Expand remote consultations through telephone and video to capitalize on their lower missed rates</li>
+        <li>Implement weekend utilization improvements to balance weekday over-utilization</li>
+        <li>Deploy automated appointment reminders for bookings with intervals greater than 8 days</li>
+        <li>Develop region-specific interventions targeting the unique patterns in high-miss areas</li>
+      </ul>
+      <h4>Strategic Recommendations</h4>
+      <ul>
+        <li>Redistribute staff resources to match peak demand periods and underutilized capacity windows</li>
+        <li>Balance face-to-face and telephone appointment availability based on regional attendance patterns</li>
+        <li>Consider short-term staff augmentation to address post-COVID demand surges</li>
+        <li>Improve data collection methods to enable more granular analysis in the future</li>
       </ul>
       <h4>Technical Recommendations</h4>
       <ul>
-        <li>Conduct further analysis at regional levels to tailor marketing and product strategies more effectively.</li>
-        <li>Gather more granular product, invoicing and marketing data to refine sales and marketing strategies.</li>
+        <li>Create a unified data model linking appointment-level data across all systems</li>
+        <li>Incorporate population metrics and healthcare provider data for more comprehensive analysis</li>
+        <li>Extend data collection timeframes to better identify seasonal patterns</li>
+        <li>Develop advanced predictive models once post-COVID normalization periods provide more stable data</li>
       </ul>
-      <hr>
-
-      <h3>The Tableau Dashboard is available here: <a href="https://public.tableau.com/views/2Market_Analysis_SujithKumaarKC/MarketingEffectivenessDashboard?:language=en-US&:sid=&:re[...]">2Market Customer Analysis</a></h3>
-      <div class='tableauPlaceholder' id='viz1741735184595' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;2M&#47;2Market_Analysis_SujithKumaarKC&#47;CustomerDemographics&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='2Market_Analysis_SujithKumaarKC&#47;CustomerDemographics' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;2M&#47;2Market_Analysis_SujithKumaarKC&#47;CustomerDemographics&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1741735184595');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='3300px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
     </article>
   </div>
 </body>
